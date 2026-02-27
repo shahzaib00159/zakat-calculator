@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasbeeh Counter</title>
+
+<style>
+body {
+font-family: Arial;
+background: #f2f2f2;
+text-align: center;
+padding: 40px;
+}
+.container {
+background: white;
+padding: 30px;
+max-width: 400px;
+margin: auto;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+button {
+padding: 15px;
+margin: 10px;
+width: 100%;
+font-size: 18px;
+border: none;
+cursor: pointer;
+}
+.count {
+font-size: 40px;
+margin: 20px;
+color: green;
+}
+.increment {
+background: green;
+color: white;
+}
+.reset {
+background: red;
+color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Tasbeeh Counter</h2>
+
+<div class="count" id="count">0</div>
+
+<button class="increment" onclick="increase()">Count</button>
+<button class="reset" onclick="reset()">Reset</button>
+</div>
+
+<script>
+let count = 0;
+
+function increase() {
+count++;
+document.getElementById("count").innerText = count;
+}
+
+function reset() {
+count = 0;
+document.getElementById("count").innerText = count;
+}
+</script>
+
+</body>
+</html>
